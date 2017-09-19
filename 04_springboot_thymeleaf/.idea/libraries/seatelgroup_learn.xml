@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="seatelgroup_learn">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../demo_springboot_learnjava/target/seatelgroup_learn.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="demo_springboot_freemaker-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../demo_springboot_freemaker/target/demo_springboot_freemaker-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

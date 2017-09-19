@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: 04_springboot_thymeleaf
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: springboot.thymeleaf
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/04_springboo
+ t_thymeleaf/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

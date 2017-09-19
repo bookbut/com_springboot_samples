@@ -1,0 +1,16 @@
+com\seatel\config\SpringConfig.class
+com\seatel\entity\Greeting.class
+com\seatel\service\UserInfoService.class
+com\seatel\config\CxfConfig.class
+com\seatel\mapper\UserDao.class
+com\seatel\mapper\UserMapper.class
+com\seatel\Application.class
+com\seatel\test\HttpClientTest.class
+com\seatel\controller\UserController.class
+com\seatel\service\UserInfoServiceImp.class
+com\seatel\service\UserService.class
+com\seatel\controller\PostController.class
+com\seatel\entity\UserInfo.class
+com\seatel\enums\UserSex.class
+com\seatel\entity\Loin.class
+com\seatel\entity\User.class
