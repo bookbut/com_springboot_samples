@@ -9,18 +9,10 @@
         <module name="00_springboot_helloworld" />
         <module name="01_springboot_mybatis" />
         <module name="02_springboot_controller" />
-        <module name="02_springboot_cxf" />
-        <module name="02_springboot_mapping" />
         <module name="03_springboot_cxf" />
         <module name="04_springboot_thymeleaf" />
         <module name="05_springboot_freemaker" />
-        <module name="com-java-samples" />
-        <module name="com-springboot-samples" />
-        <module name="com_android_samples" />
-        <module name="com_java_samples" />
-        <module name="com_seatel_demos" />
         <module name="com_springboot_samples" />
-        <module name="demo_springboot_samples" />
         <module name="seatelgroup_baseapi" />
         <module name="seatelgroup_basedubbo" />
         <module name="seatelgroup_basefoundation" />
@@ -45,33 +37,16 @@
         <module name="seatelgroup_soapcrm" />
         <module name="seatelgroup_soapdemoserver" />
         <module name="seatelgroup_soappaygo" />
-        <module name="springboot-mybatis-annotation" />
-      </profile>
-      <profile name="Annotation profile for com-springboot-samples" enabled="true">
-        <sourceOutputDir name="../00_springboot_helloworld/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../00_springboot_helloworld/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="demo_springboot_samples (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="00_springboot_helloworld" target="1.8" />
       <module name="01_springboot_mybatis" target="1.8" />
       <module name="02_springboot_controller" target="1.8" />
-      <module name="02_springboot_cxf" target="1.8" />
-      <module name="02_springboot_mapping" target="1.8" />
       <module name="03_springboot_cxf" target="1.8" />
       <module name="04_springboot_thymeleaf" target="1.8" />
       <module name="05_springboot_freemaker" target="1.8" />
-      <module name="com-java-samples" target="1.5" />
-      <module name="com-springboot-samples" target="1.5" />
-      <module name="com_android_samples" target="1.5" />
-      <module name="com_java_samples" target="1.5" />
-      <module name="com_seatel_demos" target="1.5" />
       <module name="com_springboot_samples" target="1.5" />
-      <module name="demo_springboot_samples" target="1.8" />
-      <module name="demo_springboot_samples (1)" target="1.8" />
-      <module name="demo_springboot_samples (2)" target="1.8" />
       <module name="seatelgroup_base" target="1.5" />
       <module name="seatelgroup_baseapi" target="1.6" />
       <module name="seatelgroup_basedubbo" target="1.6" />
@@ -99,7 +74,6 @@
       <module name="seatelgroup_soapcrm" target="1.8" />
       <module name="seatelgroup_soapdemoserver" target="1.6" />
       <module name="seatelgroup_soappaygo" target="1.5" />
-      <module name="springboot-mybatis-annotation" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

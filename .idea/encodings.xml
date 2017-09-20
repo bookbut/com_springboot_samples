@@ -23,6 +23,8 @@
     <file url="file://E:/seatelgroup_game_java_main/seatelgroup_game/seatelgroup_gameblackjack_ai" charset="UTF-8" />
     <file url="file://E:/seatelgroup_game_java_main/seatelgroup_game/seatelgroup_gamems" charset="UTF-8" />
     <file url="file://E:/seatelgroup_game_java_main/seatelgroup_game/seatelgroup_gamesqlcode" charset="UTF-8" />
+    <file url="file://E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapdemoclient/src/main/java/com/seatelgroup/soap/democlient/cxf/DemoAdd.java" charset="UTF-8" />
+    <file url="file://E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapdemoclient/src/main/java/com/seatelgroup/soap/democlient/cxf/DemoAddResponse.java" charset="UTF-8" />
     <file url="file://E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapdemoserver" charset="UTF-8" />
   </component>
 </project>

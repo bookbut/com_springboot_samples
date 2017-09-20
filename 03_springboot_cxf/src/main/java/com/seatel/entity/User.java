@@ -1,69 +1,40 @@
 package com.seatel.entity;
 
-import com.seatel.enums.UserSex;
+import java.io.Serializable;
+import java.util.Date;
 
-public class User {
-	private int id;
-	private String userName;
-	private String passWord;
-	private String nickName;
-	private UserSex userSex;
-	
-	public User() {
-		super();
-	}
+public class User implements Serializable {
 
-	public User(int id, String userName, String passWord, String nickName, UserSex userSex) {
-		this.id = id;
-		this.userName = userName;
-		this.passWord = passWord;
-		this.nickName = nickName;
-		this.userSex = userSex;
-	}
+    private static final long serialVersionUID = -5939599230753662529L;
+    private String              userId;
+    private String            username;
+    private String            age;
+    private Date              updateTime;
+    //getter setter ......
+    public void setUserId(String userId) {
+        this.userId=userId;
+    }
+    public void setUsername(String username) {
+        this.username=username;
+    }
+    public void setAge(String age) {
+        this.age=age;
+    }
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime=updateTime;
+    }
 
-	public int getId() {
-		return id;
-	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassWord() {
-		return passWord;
-	}
-
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
-	}
-
-	public String getNickName() {
-		return nickName;
-	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-
-	public UserSex getUserSex() {
-		return userSex;
-	}
-
-	public void setUserSex(UserSex userSex) {
-		this.userSex = userSex;
-	}
-
-	@Override
-	public String toString() {
-		return "User:id=" + this.id + "&userName=" + this.userName + "&passWord=" + this.passWord + "&address="
-				+ this.nickName + "&userSex=" + this.userSex;
-	}
+    public String getUserId() {
+        return userId;
+    }
+    public String getUserName() {
+        return username;
+    }
+    public String getAge() {
+        return age;
+    }
+    public Date getUpdateTime() {
+        return updateTime;
+    }
 }

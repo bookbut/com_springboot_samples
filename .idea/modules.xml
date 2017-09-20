@@ -5,13 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/00_springboot_helloworld/00_springboot_helloworld.iml" filepath="$PROJECT_DIR$/00_springboot_helloworld/00_springboot_helloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/01_springboot_mybatis/01_springboot_mybatis.iml" filepath="$PROJECT_DIR$/01_springboot_mybatis/01_springboot_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/02_springboot_controller/02_springboot_controller.iml" filepath="$PROJECT_DIR$/02_springboot_controller/02_springboot_controller.iml" />
-      <module fileurl="file://$PROJECT_DIR$/03_springboot_cxf/02_springboot_cxf.iml" filepath="$PROJECT_DIR$/03_springboot_cxf/02_springboot_cxf.iml" />
-      <module fileurl="file://$PROJECT_DIR$/02_springboot_controller/02_springboot_mapping.iml" filepath="$PROJECT_DIR$/02_springboot_controller/02_springboot_mapping.iml" />
       <module fileurl="file://$PROJECT_DIR$/03_springboot_cxf/03_springboot_cxf.iml" filepath="$PROJECT_DIR$/03_springboot_cxf/03_springboot_cxf.iml" />
       <module fileurl="file://$PROJECT_DIR$/04_springboot_thymeleaf/04_springboot_thymeleaf.iml" filepath="$PROJECT_DIR$/04_springboot_thymeleaf/04_springboot_thymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/05_springboot_freemaker/05_springboot_freemaker.iml" filepath="$PROJECT_DIR$/05_springboot_freemaker/05_springboot_freemaker.iml" />
-      <module fileurl="file://E:/com_android_samples/com_android_samples.iml" filepath="E:/com_android_samples/com_android_samples.iml" />
-      <module fileurl="file://E:/com_java_samples/com_java_samples.iml" filepath="E:/com_java_samples/com_java_samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/com_springboot_samples.iml" filepath="$PROJECT_DIR$/com_springboot_samples.iml" />
       <module fileurl="file://E:/seatelgroup_base/seatelgroup_base/seatelgroup_base.iml" filepath="E:/seatelgroup_base/seatelgroup_base/seatelgroup_base.iml" />
       <module fileurl="file://E:/seatelgroup_base/seatelgroup_base/seatelgroup_baseapi/seatelgroup_baseapi.iml" filepath="E:/seatelgroup_base/seatelgroup_base/seatelgroup_baseapi/seatelgroup_baseapi.iml" />
@@ -40,8 +36,6 @@
       <module fileurl="file://E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapcrm/seatelgroup_soapcrm.iml" filepath="E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapcrm/seatelgroup_soapcrm.iml" />
       <module fileurl="file://E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapdemoserver/seatelgroup_soapdemoserver.iml" filepath="E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapdemoserver/seatelgroup_soapdemoserver.iml" />
       <module fileurl="file://E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soappaygo/seatelgroup_soappaygo.iml" filepath="E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soappaygo/seatelgroup_soappaygo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/02_springboot_controller/springboot-mybatis-annotation.iml" filepath="$PROJECT_DIR$/02_springboot_controller/springboot-mybatis-annotation.iml" />
-      <module fileurl="file://E:/seatelgroup_api/testgit/testgit.iml" filepath="E:/seatelgroup_api/testgit/testgit.iml" />
     </modules>
   </component>
 </project>

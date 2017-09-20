@@ -4,15 +4,12 @@ import java.util.List;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.seatel.entity.UserEntity;
 import com.seatel.mapper.UserMapper;
 
-@RestController
+@RestController  //等价每个函数前面添加@ResponseBody
 public class UserController {
 	@Autowired
 	private UserMapper userMapper;
@@ -82,4 +79,34 @@ public class UserController {
 		// userMapper.delete(id);
 	}
 
+	/*
+	* 结合httpClient
+	* */
+
+	@RequestMapping(value="request1",method = RequestMethod.POST)
+//        @ModelAttribute 可有可无 好像
+	String getPostData1(String username,String nickname){
+		System.out.println("客户端请求的参数1" + username + " " + nickname );
+
+		JSONObject result = new JSONObject();
+		result.put("result",1);
+		result.put("code","success");
+		JSONObject data = new JSONObject("{\"uid\":\"10000\",\"title\":\"test request2\",\"content\":\"this is a request2\"}");
+		result.put("data",data);
+		System.out.println("getPostData1" + result.toString());
+		return  result.toString();
+	}
+
+	@RequestMapping(value="request2",method = RequestMethod.POST)
+	String getPostData2(@RequestBody String params){
+		System.out.println("客户端请求的参数2" + params);
+
+		JSONObject result = new JSONObject();
+		result.put("result",1);
+		result.put("code","success");
+		JSONObject data = new JSONObject("{\"uid\":\"10000\",\"title\":\"test request1\",\"content\":\"this is a request1\"}");
+		result.put("data",data);
+		System.out.println("getPostData2" + result.toString());
+		return  result.toString();
+	}
 }
