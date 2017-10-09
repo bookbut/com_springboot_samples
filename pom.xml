@@ -6,6 +6,7 @@
 
     <groupId>com.springboot.samples</groupId>
     <artifactId>com_springboot_samples</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
@@ -15,5 +16,7 @@
         <module>03_springboot_cxf</module>
         <module>04_springboot_thymeleaf</module>
         <module>05_springboot_freemaker</module>
+        <module>06_springboot_singlegame</module>
+        <module>07_springboot_gamecore</module>
     </modules>
 </project>

@@ -15,19 +15,19 @@ public class CxfConfig2 {
 //    @Autowired
 //    private Bus bus;
 
-        @Bean(name = Bus.DEFAULT_BUS_ID)
-    public SpringBus springBus() {
-        return new SpringBus();
-    }
-
-    @Autowired
-    CommonService commonService;
-
-    /** JAX-WS **/
-    @Bean
-    public Endpoint endpoint() {
-        EndpointImpl endpoint = new EndpointImpl(springBus(), commonService);
-        endpoint.publish("/CommonService");
-        return endpoint;
-    }
+//        @Bean(name = Bus.DEFAULT_BUS_ID)
+//    public SpringBus springBus() {
+//        return new SpringBus();
+//    }
+//
+//    @Autowired
+//    CommonService commonService;
+//
+//    /** JAX-WS **/
+//    @Bean
+//    public Endpoint endpoint() {
+//        EndpointImpl endpoint = new EndpointImpl(springBus(), commonService);
+//        endpoint.publish("/CommonService");
+//        return endpoint;
+//    }
 }

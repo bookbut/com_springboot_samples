@@ -12,7 +12,8 @@
         <module name="03_springboot_cxf" />
         <module name="04_springboot_thymeleaf" />
         <module name="05_springboot_freemaker" />
-        <module name="com_springboot_samples" />
+        <module name="06_springboot_singlegame" />
+        <module name="07_springboot_gamecore" />
         <module name="seatelgroup_baseapi" />
         <module name="seatelgroup_basedubbo" />
         <module name="seatelgroup_basefoundation" />
@@ -46,6 +47,8 @@
       <module name="03_springboot_cxf" target="1.8" />
       <module name="04_springboot_thymeleaf" target="1.8" />
       <module name="05_springboot_freemaker" target="1.8" />
+      <module name="06_springboot_singlegame" target="1.8" />
+      <module name="07_springboot_gamecore" target="1.5" />
       <module name="com_springboot_samples" target="1.5" />
       <module name="seatelgroup_base" target="1.5" />
       <module name="seatelgroup_baseapi" target="1.6" />

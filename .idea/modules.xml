@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/03_springboot_cxf/03_springboot_cxf.iml" filepath="$PROJECT_DIR$/03_springboot_cxf/03_springboot_cxf.iml" />
       <module fileurl="file://$PROJECT_DIR$/04_springboot_thymeleaf/04_springboot_thymeleaf.iml" filepath="$PROJECT_DIR$/04_springboot_thymeleaf/04_springboot_thymeleaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/05_springboot_freemaker/05_springboot_freemaker.iml" filepath="$PROJECT_DIR$/05_springboot_freemaker/05_springboot_freemaker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_springboot_singlegame/06_springboot_singlegame.iml" filepath="$PROJECT_DIR$/06_springboot_singlegame/06_springboot_singlegame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_springboot_gamecore/07_springboot_gamecore.iml" filepath="$PROJECT_DIR$/07_springboot_gamecore/07_springboot_gamecore.iml" />
       <module fileurl="file://$PROJECT_DIR$/com_springboot_samples.iml" filepath="$PROJECT_DIR$/com_springboot_samples.iml" />
       <module fileurl="file://E:/seatelgroup_base/seatelgroup_base/seatelgroup_base.iml" filepath="E:/seatelgroup_base/seatelgroup_base/seatelgroup_base.iml" />
       <module fileurl="file://E:/seatelgroup_base/seatelgroup_base/seatelgroup_baseapi/seatelgroup_baseapi.iml" filepath="E:/seatelgroup_base/seatelgroup_base/seatelgroup_baseapi/seatelgroup_baseapi.iml" />

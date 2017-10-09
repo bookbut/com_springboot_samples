@@ -13,7 +13,7 @@ public class Application{
 		SpringApplication.run(Application.class, args);
 
 //		cl0();
-		cl1();
+//		cl1();
 	}
 
 	public static  void cl0()throws Exception{
