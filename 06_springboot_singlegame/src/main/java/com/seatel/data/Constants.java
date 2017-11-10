@@ -4,9 +4,11 @@ public class Constants {
 //    每天初始化体力与第一次进游戏金币
     public static int DATA_INIT_STRENGTH = 6;
     public static int DATA_INIT_ACCOUNT = 300;
+    public static String DATA_INIT_PHOTO = "0";
 //错误状态码
     public static String STATUS = "status";
     public static String DESC = "desc";
+    public static String DATA = "data";
 
     public static int RESULT_SUCCESS_STATUS = 1;
     public static String RESULT_SUCCESS_DESC = "系统成功";

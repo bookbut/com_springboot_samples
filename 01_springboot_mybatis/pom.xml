@@ -96,12 +96,12 @@
             </plugin>
         </plugins>
     </build>
-    <!--<profiles>
+    <profiles>
         <profile>
             <id>develop</id>
             <properties>
                 <server.port>8080</server.port>
-                <datasource.url>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf-8
+                <datasource.url>jdbc:mysql://localhost:3306/game?useUnicode=true&amp;characterEncoding=utf-8
                 </datasource.url>
                 <datasource.username>root</datasource.username>
                 <datasource.password></datasource.password>
@@ -117,5 +117,5 @@
                 <datasource.password></datasource.password>
             </properties>
         </profile>
-    </profiles>-->
+    </profiles>
 </project>

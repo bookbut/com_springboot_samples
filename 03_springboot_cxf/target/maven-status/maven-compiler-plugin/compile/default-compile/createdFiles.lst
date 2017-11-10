@@ -1,6 +1,0 @@
-com\seatel\service\UserService.class
-com\seatel\service\UserServiceImpl.class
-com\seatel\config\CxfConfig.class
-com\seatel\Application.class
-com\seatel\mapper\UserController.class
-com\seatel\entity\User.class

@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="seatelgroup_gamems:war">
-    <output-path>E:/seatelgroup_game_java_main/seatelgroup_game/seatelgroup_gamems/target</output-path>
-    <root id="archive" name="ROOT.war">
-      <element id="artifact" artifact-name="seatelgroup_gamems:war exploded" />
-    </root>
-  </artifact>
-</component>

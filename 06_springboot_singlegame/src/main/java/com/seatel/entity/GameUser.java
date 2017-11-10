@@ -3,7 +3,7 @@ package com.seatel.entity;
 import java.io.Serializable;
 
 public class GameUser implements Serializable{
-    private int userId;
+    private long userId;
     private String userName;
     private String userPhoto;
 
@@ -12,11 +12,20 @@ public class GameUser implements Serializable{
     private int bingoCurrentDate;
     private int bingoHighPass;
 
-    public int getUserId() {
+    public GameUser() {
+        super();
+    }
+
+//    @Override
+//    public String toString() {
+//        return super.toString();
+//    }
+
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 

@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="seatelgroup_soapdemoserver:war">
-    <output-path>E:/seatelgroup_soap/seatelgroup_soap/seatelgroup_soapdemoserver/target</output-path>
-    <root id="archive" name="ROOT.war">
-      <element id="artifact" artifact-name="seatelgroup_soapdemoserver:war exploded" />
-    </root>
-  </artifact>
-</component>
