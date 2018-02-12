@@ -1,11 +1,11 @@
-package com.seatelgroup.learn.controller;
+package com.seatel.controller;
 
+import com.seatel.service.LearnService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.seatelgroup.learn.pojo.Learn;
-import com.seatelgroup.learn.service.LearnService;
+import com.seatel.pojo.Learn;
 
 @RestController
 //@RequestMapping("/learn")

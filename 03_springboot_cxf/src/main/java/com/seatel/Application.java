@@ -1,21 +1,61 @@
 package com.seatel;
 
 import com.seatel.service.CommonService;
+import com.seatel.service.HelloServiceImpl;
+import com.seatel.service.wsimport.HelloService;
 import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.xml.namespace.QName;
+import javax.xml.ws.BindingProvider;
+import javax.xml.ws.Endpoint;
+import javax.xml.ws.Service;
+import java.net.URL;
+import java.util.Map;
+
 @SpringBootApplication
 public class Application{
 	public static void main(String[] args) throws Exception{
 		SpringApplication.run(Application.class, args);
 
-//		cl0();
+		c0();
 //		cl1();
 	}
 
+	public static  void c0()throws Exception{
+		//发布
+		Endpoint.publish("http://localhost:8081/hello", new HelloServiceImpl());
+
+		//调用
+		try {
+			String targetNamespace = "http://service.seatel.com/";
+			QName serviceName = new QName(targetNamespace, "helloService");
+			QName portName = new QName(targetNamespace, "helloService");
+			URL wsdl = new URL("http://localhost:8081/hello");
+			//内部会创建一个ServiceDelegate类型的对象赋给属性delegate
+			Service service = Service.create(wsdl, serviceName);
+			//会利用delegate创建一个服务接口的代理对象，同时还会代理BindingProvider和Closeable接口。
+			HelloService helloService = service.getPort(portName, HelloService.class);
+
+
+			BindingProvider bindingProvider = (BindingProvider) helloService;
+			Map<String, Object> requestContext = bindingProvider.getRequestContext();
+			requestContext.put("com.sun.xml.internal.ws.connection.timeout", 3 * 1000);//建立连接的超时时间为10秒
+			requestContext.put("com.sun.xml.internal.ws.request.timeout", 3 * 1000);//指定请求的响应超时时间为15秒
+
+			//在调用接口方法时，内部会发起一个HTTP请求，发起HTTP请求时会从BindingProvider的getRequestContext()返回结果中获取超时参数，
+			//分别对应com.sun.xml.internal.ws.connection.timeout和com.sun.xml.internal.ws.request.timeout参数，
+			//前者是建立连接的超时时间，后者是获取请求响应的超时时间，单位是毫秒。如果没有指定对应的超时时间或者指定的超时时间为0都表示永不超时。
+
+			System.out.println(helloService.sayHello("Elim"));
+
+		} catch (Exception e) {
+			System.out.println("io exception=================================>" + e.toString());
+		}
+	}
 	public static  void cl0()throws Exception{
 		JaxWsDynamicClientFactory dcf =JaxWsDynamicClientFactory.newInstance();
 		org.apache.cxf.endpoint.Client client =dcf.createClient("http://localhost:8080/test/user?wsdl");

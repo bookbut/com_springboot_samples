@@ -1,4 +1,4 @@
-package com.seatelgroup.learn.pojo;
+package com.seatel.pojo;
 
 public class Learn {
 

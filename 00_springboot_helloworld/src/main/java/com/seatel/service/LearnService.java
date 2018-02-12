@@ -1,10 +1,10 @@
-package com.seatelgroup.learn.service;
+package com.seatel.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.seatelgroup.learn.pojo.Learn;
-import com.seatelgroup.learn.sql.LearnMapper;
+import com.seatel.pojo.Learn;
+import com.seatel.sql.LearnMapper;
 
 @Component
 public class LearnService {

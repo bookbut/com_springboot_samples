@@ -1,4 +1,4 @@
-package com.seatelgroup.learn.app;
+package com.seatel.app;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

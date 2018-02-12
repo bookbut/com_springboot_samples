@@ -1,4 +1,4 @@
-package com.seatelgroup.learn.sql;
+package com.seatel.sql;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.seatelgroup.learn.pojo.Learn;
+import com.seatel.pojo.Learn;
 
 public interface LearnMapper {
 	

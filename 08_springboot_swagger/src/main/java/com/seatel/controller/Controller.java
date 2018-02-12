@@ -13,17 +13,19 @@ import java.util.concurrent.ConcurrentHashMap;
 @RequestMapping(value = "/users")
 public class Controller {
 
-    static Map<Long,User> users = new ConcurrentHashMap<Long,User>();
-    @ApiOperation(value="获取用户列表",notes = "notes")
-    @RequestMapping(value = "",method = RequestMethod.GET)
-    public List<User> getUsers(){
+    static Map<Long, User> users = new ConcurrentHashMap<Long, User>();
+
+    @ApiOperation(value = "获取用户列表", notes = "notes")
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public List<User> getUsers() {
         return new ArrayList<User>(users.values());
     }
-    @ApiOperation(value = "创建用户",notes = "根据User对象创建用户")
-    @ApiImplicitParam(name = "user",value = "用户详细实体user",required = true,dataType = "User")
-    @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public String insertUser(@RequestBody User user){
-        users.put(user.getId(),user);
+
+    @ApiOperation(value = "创建用户", notes = "根据User对象创建用户")
+    @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User")
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public String insertUser(@RequestBody User user) {
+        users.put(user.getId(), user);
         return "success";
     }
 //    @ApiOperation(value = "创建用户", notes = "根据User对象创建用户")

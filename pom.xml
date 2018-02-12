@@ -20,5 +20,6 @@
         <module>07_springboot_gamecore</module>
         <module>08_springboot_swagger</module>
         <module>09_springboot_fastdfs</module>
+        <module>10_springboot_httpclient</module>
     </modules>
 </project>
