@@ -11,48 +11,63 @@
     <!-- <classPathEntry location="${jdbc.driverLocation}"/>-->
 
     <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
-        <!-- 这里引入扩展插件 -->
-        <!--  <plugin type="com.seatel.mpay.manage.datasource.MySQLLimitPlugin"></plugin>-->
-        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
-        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
-            <property name="searchString" value="[e|E]xample$"/>
-            <property name="replaceString" value="Criteria"/>
-        </plugin>
-
-        <commentGenerator>
+        <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 这里的type里写的是你的实现类的类全路径 -->
+        <commentGenerator type="org.mybatis.generator.MyCommentGenerator">
             <property name="suppressDate" value="true"/>
-            <property name="suppressAllComments" value="true"/>
+            <property name="suppressAllComments" value="false"/>
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.1.123:3306/dnytest" userId="dbdny"
+                        connectionURL="jdbc:mysql://192.168.1.123:3306/dnytest?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"
+                        userId="dbdny"
                         password="dny123456">
+            <!-- 针对oracle数据库 -->
+            <property name="remarksReporting" value="true"></property>
         </jdbcConnection>
+
+        <!--<jdbcConnection driverClass="${spring.datasource.driver-class-name}"-->
+        <!--connectionURL="${var.dbUrl}" userId="${var.dbUserName}"-->
+        <!--password="${var.dbPassword}">-->
+        <!--</jdbcConnection>-->
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <!-- generate Model -->
-        <javaModelGenerator targetPackage="com.seatelgroup.seashop.user.manage.data"
-                            targetProject="src/main/java">
+        <!-- dto class -->
+        <javaModelGenerator targetPackage="com.seatelgroup.seashop.finance.entity"
+                            targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.seatelgroup.seashop.user.manage.data"
-                         targetProject="src/main/java">
+        <!-- mybatis xml file -->
+        <sqlMapGenerator targetPackage="com.seatelgroup.seashop.finance.mapper"
+                         targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
+        <!-- mapper class -->
         <javaClientGenerator type="ANNOTATEDMAPPER"
-                             targetPackage="com.seatelgroup.seashop.user.manage.data"
-                             implementationPackage="com.seatelgroup.seashop.user.manage.data"
-                             targetProject="src/main/java">
+                             targetPackage="com.seatelgroup.seashop.finance.mapper"
+                             implementationPackage="com.seatelgroup.seashop.finance.mapper"
+                             targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="bq_business_address" domainObjectName="BqBusinessAddress"></table>
+        <!--不生成帮助类（Exmaples） -->
+        <!-- enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+            enableSelectByExample="false" selectByExampleQueryId="false" -->
+        <!--已生成的表 <table schema="demo" tableName="USER" domainObjectName="User"></table> -->
+        <table tableName="st_finance_order" domainObjectName="FinanceOrder"></table>
+        <table tableName="st_finance_workday" domainObjectName="FinanceWorkday"></table>
+        <table tableName="st_finance_pro_info" domainObjectName="FinanceProInfo"></table>
+        <table tableName="st_finance_user_fee" domainObjectName="FinanceUserFee"></table>
+        <table tableName="st_finance_user_info" domainObjectName="FinanceUserInfo"></table>
+        <table tableName="st_finance_user_detail" domainObjectName="FinanceUserDetail"></table>
+        <table tableName="st_finance_scheme_info" domainObjectName="FinanceSchemeInfo"></table>
     </context>
     <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">
 
