@@ -26,5 +26,6 @@
         <module>13_springboot_properties</module>
         <module>14_springboot_initBinder</module>
         <module>15_springboot_model</module>
+        <module>16_springboot_translate</module>
     </modules>
 </project>
