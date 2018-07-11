@@ -20,7 +20,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.3.39:3306/seatelpay_cpo?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"
+                        connectionURL="jdbc:mysql://192.168.3.39:3306/seatelpay_upg?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"
                         userId="root"
                         password="Hisunpay2017">
             <!-- 针对oracle数据库 -->
@@ -37,22 +37,22 @@
         </javaTypeResolver>
 
         <!-- dto class -->
-        <javaModelGenerator targetPackage="com.hisun.lemon.cpo.entity"
+        <javaModelGenerator targetPackage="com.hisun.lemon.upg.entity"
                             targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- mybatis xml file -->
-        <sqlMapGenerator targetPackage="com.hisun.lemon.cpo.mapper"
+        <sqlMapGenerator targetPackage="com.hisun.lemon.upg.mapper"
                          targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!-- mapper class -->
         <javaClientGenerator type="ANNOTATEDMAPPER"
-                             targetPackage="com.hisun.lemon.cpo.mapper"
-                             implementationPackage="com.hisun.lemon.cpo.mapper"
+                             targetPackage="com.hisun.lemon.upg.mapper"
+                             implementationPackage="com.hisun.lemon.upg.mapper"
                              targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
@@ -61,7 +61,7 @@
         <!-- enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
             enableSelectByExample="false" selectByExampleQueryId="false" -->
         <!--已生成的表 <table schema="demo" tableName="USER" domainObjectName="User"></table> -->
-        <table tableName="cpo_withdraw_order" domainObjectName="WithdrawOrder"></table>
+        <table tableName="upg_order_inf" domainObjectName="UpgOrderInfo"></table>
     </context>
     <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">
 
