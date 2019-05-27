@@ -13,7 +13,6 @@
     <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
         <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
         <property name="javaFileEncoding" value="UTF-8"/>
-        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <!-- 这里的type里写的是你的实现类的类全路径 -->
         <commentGenerator type="org.mybatis.generator.MyCommentGenerator">
             <property name="suppressDate" value="true"/>
@@ -21,7 +20,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.3.39:3306/seatelpay_cpi?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true"
+                        connectionURL="jdbc:mysql://192.168.3.39:3306/seatelpay_cmm?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true"
                         userId="root"
                         password="Hisunpay2017">
             <!-- 针对oracle数据库 -->
@@ -38,22 +37,22 @@
         </javaTypeResolver>
 
         <!-- dto class -->
-        <javaModelGenerator targetPackage="com.hisun.lemon.cpi.entity"
+        <javaModelGenerator targetPackage="com.hisun.lemon.cmm.entity"
                             targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- mybatis xml file -->
-        <sqlMapGenerator targetPackage="com.hisun.lemon.cpi.mapper"
+        <sqlMapGenerator targetPackage="com.hisun.lemon.cmm.mapper"
                          targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!-- mapper class -->
         <javaClientGenerator type="ANNOTATEDMAPPER"
-                             targetPackage="com.hisun.lemon.cpi.mapper"
-                             implementationPackage="com.hisun.lemon.cpi.mapper"
+                             targetPackage="com.hisun.lemon.cmm.mapper"
+                             implementationPackage="com.hisun.lemon.cmm.mapper"
                              targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
@@ -63,18 +62,7 @@
             enableSelectByExample="false" selectByExampleQueryId="false" -->
         <!--已生成的表 <table schema="demo" tableName="USER" domainObjectName="User"></table> -->
 
-        <!--<table tableName="cpi_ebank_order" domainObjectName="EbankOrderInfo"></table>-->
-        <!--<table tableName="cpi_fund_order" domainObjectName="FundOrderInfo"></table>-->
-        <!--<table tableName="cpi_fund_suborder" domainObjectName="FundSubOrderInfo"></table>-->
-        <!--<table tableName="cpi_fund_poll_param" domainObjectName="FundParamInfo"></table>-->
-        <!--<table  tableName="cpi_refund_order" domainObjectName="RefundOrderInfo"></table>-->
-        <!--<table tableName="cpi_refund_suborder" domainObjectName="RefundSubOrderInfo"></table>-->
-        <!--<table tableName="cpi_sub_un_merc_list" domainObjectName="SubUnMercInfo"></table>-->
-        <!--<table tableName="cpi_sub_un_merc_list_cast" domainObjectName="SubUnMercCastInfo"></table>-->
-
-        <!--<table tableName="cpi_sub_al_merc_list" domainObjectName="SubAlMercInfo"></table>-->
-        <table tableName="cpi_auth_order" domainObjectName="CpiAuthOrder"></table>
-        <!--<table tableName="cpi_refund_param" domainObjectName="RefundParamInfo"></table>-->
+        <table tableName="cmm_channel_rate" domainObjectName="ChannelRate"></table>
     </context>
     <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">
 
