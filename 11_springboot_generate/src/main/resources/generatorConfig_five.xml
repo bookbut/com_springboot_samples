@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--导入属性配置 -->
+    <!--<properties resource="application-prod.properties"/>-->
+    <properties resource="application.properties"/>
+    <!--指定特定数据库的jdbc驱动jar包的位置 -->
+    <!-- <classPathEntry location="${jdbc.driverLocation}"/>-->
+
+    <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
+        <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+        <!-- 这里的type里写的是你的实现类的类全路径 -->
+        <commentGenerator type="org.mybatis.generator.MyCommentGenerator">
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.3.39:3306/fivepay?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"
+                        userId="root"
+                        password="Hisunpay2017">
+            <!-- 针对oracle数据库 -->
+            <property name="remarksReporting" value="true"></property>
+        </jdbcConnection>
+
+        <!--<jdbcConnection driverClass="${spring.datasource.driver-class-name}"-->
+        <!--connectionURL="${var.dbUrl}" userId="${var.dbUserName}"-->
+        <!--password="${var.dbPassword}">-->
+        <!--</jdbcConnection>-->
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- dto class -->
+        <javaModelGenerator targetPackage="com.fivepay.entity"
+                            targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- mybatis xml file -->
+        <sqlMapGenerator targetPackage="com.fivepay.mapper"
+                         targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- mapper class -->
+        <javaClientGenerator type="ANNOTATEDMAPPER"
+                             targetPackage="com.fivepay.mapper"
+                             implementationPackage="com.fivepay.mapper"
+                             targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--不生成帮助类（Exmaples） -->
+        <!-- enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+            enableSelectByExample="false" selectByExampleQueryId="false" -->
+        <!--已生成的表 <table schema="demo" tableName="USER" domainObjectName="User"></table> -->
+
+        <table tableName="bil_order" domainObjectName="BilOrder">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="orderId" sqlStatement="JDBC" identity="true"/>
+        </table>
+        <table tableName="acm_balance" domainObjectName="AcmBalance">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="balanceId" sqlStatement="JDBC" identity="true"/>
+        </table>
+        <table tableName="cmm_schedule" domainObjectName="CmmSchedule">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="scheduleId" sqlStatement="JDBC" identity="true"/>
+        </table>
+        <table tableName="cmm_channelparam" domainObjectName="CmmChannelParam">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="channelParamId" sqlStatement="JDBC" identity="true"/>
+            <columnOverride column="html" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="cmm_grouppaytype" domainObjectName="CmmGroupPayType">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="cmm_localpaytype" domainObjectName="CmmLocalPayType">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="cmm_channelpaytype" domainObjectName="CmmChannelPayType">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="cmm_paychannel" domainObjectName="CmmPayChannel">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="cmm_paygroup" domainObjectName="CmmPayGroup">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="cmm_paytype" domainObjectName="CmmPayType">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="csm_settle" domainObjectName="CsmSettle">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="settleId" sqlStatement="JDBC" identity="true"/>
+        </table>
+
+        <table tableName="cpo_paid_order" domainObjectName="CpoPaidOrder">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="orderId" sqlStatement="JDBC" identity="true"/>
+        </table>
+        <table tableName="lom_channellog" domainObjectName="LomChannelLog">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="logId" sqlStatement="JDBC" identity="true"/>
+            <columnOverride column="requestContext" jdbcType="VARCHAR"/>
+            <columnOverride column="responseContext" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="lom_notifylog" domainObjectName="LomNotifyLog">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="logId" sqlStatement="JDBC" identity="true"/>
+        </table>
+        <table tableName="lom_interfacelog" domainObjectName="LomInterfaceLog">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="logId" sqlStatement="JDBC" identity="true"/>
+            <columnOverride column="requestContext" jdbcType="VARCHAR"/>
+            <columnOverride column="responseContext" jdbcType="VARCHAR"/>
+        </table>
+
+        <table tableName="rsm_blacklist" domainObjectName="RsmBackList">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="rsm_norm" domainObjectName="RsmNorm">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="urm_merchant" domainObjectName="UrmMerchant">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+        <table tableName="urm_rate" domainObjectName="UrmRate">
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+    </context>
+    <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">
+
+
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="[e|E]xample$"/>
+            <property name="replaceString" value="Criteria"/>
+        </plugin>
+
+
+
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${spring.datasource.agent.driver-class-name}"
+                        connectionURL="${spring.datasource.agent.url}" userId="${spring.datasource.agent.username}"
+                        password="${spring.datasource.agent.password}">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        &lt;!&ndash; generate Model &ndash;&gt;
+        <javaModelGenerator targetPackage="com.seatel.mpay.manage.model.database2"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.seatel.mpay.manage.model.database2.mapper"
+                         targetProject="src/main/java" >
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="ANNOTATEDMAPPER"
+                             targetPackage="com.seatel.mpay.manage.model.database2.mapper"
+                             implementationPackage="com.seatel.mpay.manage.model.database2.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="shop" domainObjectName="Shop"></table>
+
+    </context>-->
+
+
+</generatorConfiguration>
