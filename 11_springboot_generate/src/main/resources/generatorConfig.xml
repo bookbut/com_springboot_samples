@@ -72,13 +72,25 @@
         </table>
         <table tableName="customers" domainObjectName="Customer">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="cust_id" sqlStatement="JDBC" identity="true"/>
+            <generatedKey column="customer_id" sqlStatement="JDBC" identity="true"/>
             <columnOverride column="requestContext" jdbcType="VARCHAR"/>
             <columnOverride column="responseContext" jdbcType="VARCHAR"/>
         </table>
-        <table tableName="marketing" domainObjectName="MKT">
+        <table tableName="marketing" domainObjectName="Marketing">
             <property name="useActualColumnNames" value="false"/>
-            <generatedKey column="mk_id" sqlStatement="JDBC" identity="true"/>
+            <generatedKey column="marketing_id" sqlStatement="JDBC" identity="true"/>
+            <columnOverride column="requestContext" jdbcType="VARCHAR"/>
+            <columnOverride column="responseContext" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="loans" domainObjectName="Loan">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="loan_id" sqlStatement="JDBC" identity="true"/>
+            <columnOverride column="requestContext" jdbcType="VARCHAR"/>
+            <columnOverride column="responseContext" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="repays" domainObjectName="Repay">
+            <property name="useActualColumnNames" value="false"/>
+            <generatedKey column="repay_id" sqlStatement="JDBC" identity="true"/>
             <columnOverride column="requestContext" jdbcType="VARCHAR"/>
             <columnOverride column="responseContext" jdbcType="VARCHAR"/>
         </table>
