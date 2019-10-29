@@ -21,9 +21,9 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.0.55:3306/vue_admin?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true"
+                        connectionURL="jdbc:mysql://192.168.3.39:3306/seatelpay_fin?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true"
                         userId="root"
-                        password="">
+                        password="Hisunpay2017">
             <!-- 针对oracle数据库 -->
             <property name="remarksReporting" value="true"></property>
         </jdbcConnection>
@@ -38,50 +38,57 @@
         </javaTypeResolver>
 
         <!-- dto class -->
-        <javaModelGenerator targetPackage="com.vue.entity"
+        <javaModelGenerator targetPackage="com.hisun.lemon.fin.entity"
                             targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- mybatis xml file -->
-        <sqlMapGenerator targetPackage="com.vue.admin.mapper"
+        <sqlMapGenerator targetPackage="com.hisun.lemon.fin.mapper"
                          targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!-- mapper class -->
         <javaClientGenerator type="ANNOTATEDMAPPER"
-                             targetPackage="com.vue.admin.mapper"
-                             implementationPackage="com.vue.admin.mapper"
+                             targetPackage="com.hisun.lemon.fin.mapper"
+                             implementationPackage="com.hisun.lemon.fin.mapper"
                              targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
         <!--不生成帮助类（Exmaples） -->
-        <!-- enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
-            enableSelectByExample="false" selectByExampleQueryId="false" -->
-        <!--已生成的表 <table schema="demo" tableName="USER" domainObjectName="User"></table> -->
 
-
-        <table tableName="users" domainObjectName="Users">
-            <property name="useActualColumnNames" value="true"/>
-            <generatedKey column="user_id" sqlStatement="JDBC" identity="true"/>
-            <columnOverride column="requestContext" jdbcType="VARCHAR"/>
-            <columnOverride column="responseContext" jdbcType="VARCHAR"/>
+        <table tableName="fin_date" domainObjectName="FinDate"></table>
+        <table tableName="fin_pro_cap" domainObjectName="FinProCap"></table>
+        <table tableName="fin_pro_cap_fee" domainObjectName="FinProCapFee"></table>
+        <table tableName="fin_pro_cap_item" domainObjectName="FinProCapItem"></table>
+        <table tableName="fin_pro_cap_item_fee" domainObjectName="FinProCapItemFee"></table>
+        <table tableName="fin_pro_cap_item_jrn" domainObjectName="FinProCapItemJrn"></table>
+        <table tableName="fin_pro_info" domainObjectName="FinProInfo">
+            <columnOverride column="pro_desc" jdbcType="VARCHAR"/>
+            <columnOverride column="pro_desc_en" jdbcType="VARCHAR"/>
+            <columnOverride column="pro_desc_km" jdbcType="VARCHAR"/>
+            <columnOverride column="risk_desc" jdbcType="VARCHAR"/>
+            <columnOverride column="risk_desc_en" jdbcType="VARCHAR"/>
+            <columnOverride column="risk_desc_km" jdbcType="VARCHAR"/>
+            <columnOverride column="rules_desc" jdbcType="VARCHAR"/>
+            <columnOverride column="rules_desc_en" jdbcType="VARCHAR"/>
+            <columnOverride column="rules_desc_km" jdbcType="VARCHAR"/>
+            <columnOverride column="pro_tag" jdbcType="VARCHAR"/>
+            <columnOverride column="last_reason" jdbcType="VARCHAR"/>
         </table>
-        <table tableName="customers" domainObjectName="Customers">
-            <property name="useActualColumnNames" value="true"/>
-            <generatedKey column="customer_id" sqlStatement="JDBC" identity="true"/>
-            <columnOverride column="requestContext" jdbcType="VARCHAR"/>
-            <columnOverride column="responseContext" jdbcType="VARCHAR"/>
-        </table>
-        <table tableName="marketing" domainObjectName="Marketing">
-            <property name="useActualColumnNames" value="true"/>
-            <generatedKey column="marketing_id" sqlStatement="JDBC" identity="true"/>
-            <columnOverride column="requestContext" jdbcType="VARCHAR"/>
-            <columnOverride column="responseContext" jdbcType="VARCHAR"/>
-        </table>
+        <table tableName="fin_pro_order" domainObjectName="FinProOrder"></table>
+        <table tableName="fin_user_cap" domainObjectName="FinUserCap"></table>
+        <table tableName="fin_user_cap_rrj" domainObjectName="FinUserCapRrj"></table>
+        <table tableName="fin_user_jrn" domainObjectName="FinUserJrn"></table>
+        <table tableName="fin_pro_report" domainObjectName="FinProReport"></table>
+        <table tableName="fin_pro_rate" domainObjectName="FinProRate"></table>
+        <table tableName="fin_rate_record" domainObjectName="FinRateRecod"></table>
+        <table tableName="fin_rate_param" domainObjectName="FinRateParam"></table>
+        <table tableName="fin_pro_batch" domainObjectName="FinProBatch"></table>
+        <table tableName="fin_pro_cap_snap" domainObjectName="FinProCapSnap"></table>
     </context>
     <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">
 

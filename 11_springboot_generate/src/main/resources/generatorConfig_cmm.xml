@@ -38,14 +38,14 @@
 
         <!-- dto class -->
         <javaModelGenerator targetPackage="com.hisun.lemon.cmm.entity"
-                            targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
+                            targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- mybatis xml file -->
         <sqlMapGenerator targetPackage="com.hisun.lemon.cmm.mapper"
-                         targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
+                         targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
@@ -53,7 +53,7 @@
         <javaClientGenerator type="ANNOTATEDMAPPER"
                              targetPackage="com.hisun.lemon.cmm.mapper"
                              implementationPackage="com.hisun.lemon.cmm.mapper"
-                             targetProject="E:\com_springboot_samples\11_springboot_generate\src\main\java">
+                             targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
