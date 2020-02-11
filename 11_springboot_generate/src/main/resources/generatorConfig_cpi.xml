@@ -72,8 +72,12 @@
         <!--<table tableName="cpi_sub_un_merc_list" domainObjectName="SubUnMercInfo"></table>-->
         <!--<table tableName="cpi_sub_un_merc_list_cast" domainObjectName="SubUnMercCastInfo"></table>-->
 
-        <!--<table tableName="cpi_sub_al_merc_list" domainObjectName="SubAlMercInfo"></table>-->
-        <table tableName="cpi_auth_order" domainObjectName="CpiAuthOrder"></table>
+        <table tableName="cpi_sub_al_merc_list" domainObjectName="SubAlMercInfo"></table>
+        <!--<table tableName="cpi_auth_order" domainObjectName="CpiAuthOrder"></table>-->
+        <!--<table tableName="cpi_shortcut_order" domainObjectName="ShortcutOrderInfo"></table>-->
+        <!--<table tableName="cpi_sub_al_merc_online_cast" domainObjectName="SubAlMercOnlineCast"></table>-->
+        <table tableName="cpi_sub_al_merc_list_cast" domainObjectName="SubAlMercOfflineCast"></table>
+        <table tableName="cpi_sub_merc_list" domainObjectName="SubWcMercList"></table>
         <!--<table tableName="cpi_refund_param" domainObjectName="RefundParamInfo"></table>-->
     </context>
     <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">
