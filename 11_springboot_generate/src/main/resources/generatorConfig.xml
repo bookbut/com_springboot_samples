@@ -69,23 +69,17 @@
         <!--<table tableName="cpi_fund_poll_param" domainObjectName="FundParamInfo"></table>-->
         <!--<table  tableName="cpi_refund_order" domainObjectName="RefundOrderInfo"></table>-->
         <!--<table tableName="cpi_refund_suborder" domainObjectName="RefundSubOrderInfo"></table>-->
-        <table  tableName="cpi_sub_al_merc_scode" domainObjectName="SubAlMercScode"></table>
+        <!--<table tableName="cpi_sub_un_merc_list" domainObjectName="SubUnMercInfo"></table>-->
+        <!--<table tableName="cpi_sub_un_merc_list_cast" domainObjectName="SubUnMercCastInfo"></table>-->
 
-        <table tableName="cpi_sub_un_merc_list" domainObjectName="SubUnMercList"></table>
-        <table tableName="cpi_sub_un_merc_list_cast" domainObjectName="SubUnMercCast"></table>
-
-        <table tableName="cpi_sub_al_merc_offline_list" domainObjectName="SubAlMercOfflineList"></table>
-        <table tableName="cpi_sub_al_merc_online_list" domainObjectName="SubAlMercOnlineList"></table>
+<!--        <table tableName="cpi_sub_al_merc_list" domainObjectName="SubAlMercInfo"></table>-->
         <!--<table tableName="cpi_auth_order" domainObjectName="CpiAuthOrder"></table>-->
         <!--<table tableName="cpi_shortcut_order" domainObjectName="ShortcutOrderInfo"></table>-->
-
-        <table tableName="cpi_sub_merc_cast" domainObjectName="SubWxMercCast"></table>
+        <!--<table tableName="cpi_sub_al_merc_online_cast" domainObjectName="SubAlMercOnlineCast"></table>-->
+        <table tableName="cpi_sub_al_merc_offline_list" domainObjectName="SubAlMercOfflineList"></table>
+        <table tableName="cpi_sub_al_merc_online_list" domainObjectName="SubAlMercOnlineList"></table>
         <table tableName="cpi_sub_merc_list" domainObjectName="SubWxMercList"></table>
-        <table tableName="cpi_sub_al_merc_offline_cast" domainObjectName="SubAlMercOfflineCast"></table>
-        <table tableName="cpi_sub_al_merc_online_cast" domainObjectName="SubAlMercOnlineCast"></table>
-        <table tableName="cpi_sub_un_merc_list_cast" domainObjectName="SubUnMercCastInfo"></table>
-        <table tableName="cpi_sub_al_merc_online_cast" domainObjectName="SubAlMercOnlineCast"></table>
-
+<!--        <table tableName="cpi_sub_merc_list2" domainObjectName="SubWxMercList"></table>-->
         <!--<table tableName="cpi_refund_param" domainObjectName="RefundParamInfo"></table>-->
     </context>
     <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">

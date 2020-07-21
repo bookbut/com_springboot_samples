@@ -20,7 +20,6 @@
         <module>07_springboot_gamecore</module>
         <module>08_springboot_swagger</module>
         <module>09_springboot_fastdfs</module>
-        <module>10_springboot_httpclient</module>
         <module>11_springboot_generate</module>
         <!--<module>12_springboot_gradle</module>-->
         <module>13_springboot_properties</module>

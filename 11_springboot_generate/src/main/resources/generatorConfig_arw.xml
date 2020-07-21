@@ -20,7 +20,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.3.39:3306/seatelpay_cmm?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true"
+                        connectionURL="jdbc:mysql://192.168.3.39:3306/seatelpay_arw?verifyServerCertificate=false&amp;useSSL=false&amp;requireSSL=false&amp;useUnicode=true"
                         userId="root"
                         password="Hisunpay2017">
             <!-- 针对oracle数据库 -->
@@ -37,22 +37,22 @@
         </javaTypeResolver>
 
         <!-- dto class -->
-        <javaModelGenerator targetPackage="com.hisun.lemon.cmm.entity"
+        <javaModelGenerator targetPackage="com.mpay.arw.order.entity"
                             targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- mybatis xml file -->
-        <sqlMapGenerator targetPackage="com.hisun.lemon.cmm.mapper"
+        <sqlMapGenerator targetPackage="com.mpay.arw.order.mapper"
                          targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!-- mapper class -->
         <javaClientGenerator type="ANNOTATEDMAPPER"
-                             targetPackage="com.hisun.lemon.cmm.mapper"
-                             implementationPackage="com.hisun.lemon.cmm.mapper"
+                             targetPackage="com.mpay.arw.order.mapper"
+                             implementationPackage="com.mpay.arw.order.mapper"
                              targetProject="../com_springboot_samples/11_springboot_generate/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
@@ -62,8 +62,18 @@
             enableSelectByExample="false" selectByExampleQueryId="false" -->
         <!--已生成的表 <table schema="demo" tableName="USER" domainObjectName="User"></table> -->
 
-        <table tableName="cmm_pay_channel" domainObjectName="PayChannel"></table>
-<!--        <table tableName="cmm_channel_rate" domainObjectName="ChannelRate"></table>-->
+<!--        <table tableName="arw_auth" domainObjectName="ArwAuth"></table>-->
+<!--        <table tableName="arw_auth_role" domainObjectName="ArwAuthRole"></table>-->
+<!--        <table tableName="arw_blacklist" domainObjectName="ArwBlacklist"></table>-->
+<!--        <table tableName="arw_commission" domainObjectName="ArwCommission"></table>-->
+<!--        <table tableName="arw_node" domainObjectName="ArwNode"></table>-->
+        <table tableName="dc_order" domainObjectName="Order"></table>
+<!--        <table tableName="arw_role" domainObjectName="ArwRole"></table>-->
+<!--        <table tableName="arw_sys_log" domainObjectName="ArwSysLog"></table>-->
+<!--        <table tableName="arw_terminal" domainObjectName="ArwTerminal"></table>-->
+<!--        <table tableName="arw_uncharge" domainObjectName="ArwUncharge"></table>-->
+<!--        <table tableName="arw_uncharge_list" domainObjectName="ArwUnchargeList"></table>-->
+<!--        <table tableName="arw_uncharge_role" domainObjectName="ArwUnchargeRole"></table>-->
     </context>
     <!--<context id="DB3Tables" targetRuntime="MyBatis3" defaultModelType="flat">
 
